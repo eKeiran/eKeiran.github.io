@@ -1,0 +1,270 @@
+* {
+  font-family: "storopiaregular";
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  max-width: 100;
+  scroll-behavior: fixed;
+  background: image("./img/background.png");
+}
+
+@font-face {
+  font-family: 'storopiaregular';
+  src: url('storopia-webfont.woff2') format('woff2'),
+       url('storopia-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+.nav-spacing {
+  padding-right: 2rem !important;
+  /*root elemnt size*/
+  padding-left: 2rem !important;
+}
+
+.bgnav {
+  background-image: url('../img/header.jpg');
+  height: 100px;
+}
+
+.navbar-nav {
+  align-items: center;
+}
+
+.navbar-nav li a {
+  color: white;
+}
+
+.nav-item1 {
+  font-size: 20px;
+  border-radius: 40px;
+  border: #01eaff 5px;
+  border-style: double;
+  margin-left: -66px;
+  background-color: rgb(0, 0, 0);
+}
+
+.nav-item {
+  font-size: 20px;
+  border-radius: 40px;
+  border: #01eaff 5px;
+  border-style: double;
+  margin-left: 40px;
+  background-color: rgb(0, 0, 0);
+
+}
+
+.nav-item1:hover {
+  transform: scale(1.1);
+}
+
+.nav-item:hover {
+  transform: scale(1.1);
+
+}
+
+.typewriter {
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid rgb(0, 255, 217);
+  /* The typwriter cursor */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em;
+  /* Adjust as needed */
+  animation:
+    typing 4.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  30% {
+    border-color: rgb(51, 0, 255);
+  }
+}
+
+.projects-header .section-title {
+  color: rgb(255, 255, 255);
+  padding: 20px;
+  width: 1500px;
+  font-weight: bolder;
+  filter: blur(0.5px);
+  border-radius: 5px 50px 5px;
+  background-image: url("../img/section.jpg");
+}
+
+.section-title:hover {
+  filter: brightness(120%);
+}
+
+body {
+
+  background-image: url('../img/background.png');
+  background-attachment: fixed;
+  width: 100vw;
+  color: white;
+  max-width: 100% !important;
+  cursor: url("https://www.shareicon.net/data/64x64/2015/03/25/12580_light-saber_128x128.png"
+    ),
+    auto;
+  overflow-x: hidden;
+}
+
+.logo {
+  width: 70px;
+  height: 70px;
+  filter: contrast(140%);
+}
+
+.logo:hover {
+  transform: scale(1.2);
+}
+
+.landing {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  /* height: 100vh; */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 15px;
+  text-align: center;
+}
+
+.landing .image {
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin-top: 5.2%;
+  margin-bottom: 4%;
+}
+
+.landing .image img {
+  width: 42vh;
+  height: 42vh;
+  padding: 2.8vh;
+  background-color: #000000;
+  animation: outglow 4s ease forwards;
+  animation-delay: 1s;
+  border-radius: 20%;
+}
+
+@keyframes outglow {
+  0% {
+    border-radius: 20%;
+    box-shadow: -10px -10px 45px #00ff9d, inset 10px 10px 4px #00000010;
+  }
+
+  50% {
+    border-radius: 40%;
+    box-shadow: 10px 10px 25px #00d9ff, inset -10px -10px 4px #00000010;
+  }
+
+  80% {
+    border-radius: 30%;
+  }
+
+  100% {
+    border-radius: 100%;
+    box-shadow: 10px 10px 30px #000000, inset -10px -10px 4px #00000010;
+  }
+}
+
+.myphoto {
+  filter: contrast(111%);
+}
+
+.myphoto:hover {
+  filter: blur(0.7px);
+}
+
+.landing .me {
+  min-width: 50vh;
+  min-height: 20vh;
+  background: linear-gradient(rgba(255, 255, 255, 0.514), rgba(0, 0, 0, .8)), url("../img/gifname.gif");
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  padding: 3vh 2vh 3vh 2vh;
+  box-shadow: 5px 5px 40px #000000, inset -5px -5px 10px #0000000c,
+    -5px -5px 30px #000000bb, inset -5px -5px 10px #0000000c;
+  border-style: ridge;
+  border-width: 9.2px;
+  border-color: #b3b3b3;
+}
+
+.landing .me:hover {
+  filter: brightness(130%);
+}
+
+.about {
+  margin-top: 5%;
+  position: relative;
+  max-width: 100%;
+  height: max-content;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+
+.about .section-box {
+  width: 100%;
+  margin-top: 5%;
+  max-width: 80vh;
+  margin-left: 200px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.about .section-box .box {
+  width: 690px !important;
+  max-width: 95vw;
+  height: 720px;
+  margin: 12em;
+  margin-top: -2em;
+  max-height: fit-content;
+  border-radius: 30px;
+  box-shadow: 5px 5px 30px #000000, inset -5px -5px 10px #0000000c;
+  text-align: center;
+  padding: 15px;
+  display: block;
+  justify-content: space-between;
+  line-height: 1.6;
+  padding-bottom: 20px;
+}
+
+.about .section-box .box img {
+  width: 24vh;
+  height: 25vh;
+  margin: 0 auto;
+  border-radius: 30%;
+  box-shadow: -10px -10px 20px #00000083, 10px 10px 20px #0000004b;
+  padding: 0.20em;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 8rem;
+  box-shadow: 5px 5px 30px #000000, inset -5px -5px 10px #0000000c;
+  padding: 3.5rem;
+}
