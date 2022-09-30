@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> Harkeerat Dhunda | Tech Enthusiast </title>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.PNG">
+
+    <!--Responsive meta tag-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+    <!-- ANIMATE CSS LINKS (REQUIRED) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <!--Icons-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="https://kit.fontawesome.com/8d0bf46219.js" crossorigin="anonymous"></script>
+
+    <!--For Scroll animation-->
+
+    <script>
+        // WOW INIT
+        new WOW().init();
+
+    </script>
+    <!--For tilt animationa-->
+    <script src="./assets/js/SimpleTilt.js"></script>
+    <!--For Flip-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <!--SCROLL BAR-->
+    <style>
+        /* width */
+        ::-webkit-scrollbar {
+            width: 15px;
+            height: 60px;
+            background-color: black;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px rgb(0, 0, 0);
+            border-radius: 10px;
+            background-color: black;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(rgb(0, 26, 255), rgb(0, 255, 221));
+            border-radius: 10px;
+            background-clip: content-box;
+            height: 300px;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(rgb(0, 255, 238), rgb(0, 21, 255));
+        }
+    </style>
+
+</head>
+
+<body style="font-family: storopiaregular;">
+<!--========================= Navigation Bar =========================-->
+    <nav class="navbar navbar-expand bgnav">
+        <img src="assets/img/logo.PNG" class="logo" alt="logo"></img>
+        <a class="navbar-brand col px-md-2"></a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav me-auto animate__animated animate__rotateIn animate__delay-1s">
+                    <li class="nav-item" style="margin-left: -120px ;">
+                        <a class="nav-link nav-spacing" href="#about-me">About Me</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link nav-spacing" href="#skills">Skills</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link nav-spacing" href="#projects">Projects</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link nav-spacing" href="#education">Education</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link nav-spacing" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+    </nav>
+<!--=====================================Front====================================-->
+    <div class="landing" id="section1">
+        <div class="image animate__animated animate__slideInDown wow myphoto" data-wow-duration="1.5s"
+            data-wow-delay="0.23s">
+            <img src="assets/img/me.jpg" alt="name photo">
+        </div>
+        <div class="me animate__animated animate__slideInUp wow" data-wow-duration="1.5s">
+            <h1 class="typewriter wow">Hello, World!</h1>
+            <h1 style="text-decoration: wavy;">
+                <u>I'm <b>Harkeerat Dhunda</b></u>
+            </h1>
+        </div>
+    </div>
+
+    <script>
+        tilter(".landing", {
+            perspective: 300, // Default 400
+            maxTilt: 1.6, // Default 4
+            mantain: true, // Default false
+            fx3d: false, // Default false
+            fxDistance: 70, // Default 40
+        });
+    </script>
+
+<!--========================= About ME=========================-->
+    <div class="header2" id="about-me">
+        <div class="projects-container">
+            <div class="projects-header animate__animated animate__fadeIn wow">
+                <h1 class="section-title">About Me</h1>
+            </div>
+            <div class="section-box">
+                <div class="box animate__animated animate__slideInLeft wow" data-wow-duration="1.3s"><br>
+                    <img class="me2" src="assets/img/me2.jpg">
+                        <p>
+                            <h4>Hi! I'm Harkeerat Dhunda from Pune, India.<br>I'm currently working on my B.Tech. in
+                                Computer Science. From an early age, I have always loved coding and have created websites
+                                for fun and games. I prefer to learn things by myself, and I have a great deal of passion and
+                                enthusiasm for anything I set my mind to.<br>I enjoy <b style="color: #00ffdd;">automation,
+                                customization, UI/UX, neural networks, machine learning, back-end development, game
+                                development and experimenting with my Arch Linux.<br></b>
+                                I'm also fascinated by astrophysics so I like to study that in my spare time. I also like
+                                writing stories on occasion.<br>
+                                Most of the time, I'm reading one of my favourite novels or gazing into the mysteries of space with a telescope.
+                            </h4>
+                        </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        tilter(".box", {
+            perspective: 400, // Default 400
+            maxTilt: 2, // Default 4
+            mantain: false, // Default false
+            fx3d: false, // Default false
+            fxDistance: 70, // Default 40
+        });
+    </script>
+
+<!--=========================SKILLS=========================-->
+    <div class="header2" id="skills">
+        <div class="projects-container">
+            <div class="projects-header animate__animated animate__fadeIn wow">
+                <h1 class="section-title">Skills</h1>
+            </div>
+            <div class="section-box">
+                <div class="box3 animate__animated animate__slideInLeft wow" data-wow-duration="1.3s">
+                    <h6 class="typewriter wow" style="text-decoration:underline ; font-size: 42;">Programming</h6>
+                    <div class="skill">
+                        <i class="skills devicon-cplusplus-plain-wordmark" style="font-size: 40px;" title="C++"></i></a>
+                        <i class="skills devicon-html5-plain" style="font-size: 40px;" title="HTML5"></i>
+                        <i class="skills devicon-css3-plain" style="font-size: 40px;" title="CSS3"></i>
+                        <i class="skills devicon-javascript-plain" style="font-size: 40px;" title="JAVASCRIPT"></i><br>
+                        <i class="skills fa-brands fa-python fa-2x" title="PYTHON"></i>
+                        <i class="skills devicon-mysql-plain" style="font-size: 40px;" title="MySQL"></i>
+                        <i class="skills fa-brands fa-java fa-2x" title="JAVA"></i>
+                        <i class="skills devicon-linux-plain" style="font-size: 40px;" title="LINUX"></i>
+                        <i class="skills devicon-react-original" style="font-size: 40px;" title="React.js"></i>
+                        <i class="skills devicon-nodejs-plain" style="font-size: 40px;" title="Node.js"></i>
+                    </div><br>
+                        <div class="sec">
+                            <h6 class="typewriter wow" style="text-decoration:underline ;">Tools & Tech</h6>
+                        </div>
+                        <div class="skill">
+                            <i class="skills devicon-visualstudio-plain" style="font-size: 40px;"
+                            title="Visual Studio"></i></a>
+                            <i class="skills devicon-bash-plain" style="font-size: 40px;" title="Bash"></i>
+                            <i class="skills devicon-gimp-plain" style="font-size: 40px;" title="GIMP"></i>
+                            <i class="skills devicon-git-plain" style="font-size: 40px;" title="GIT"></i><br>
+                            <i class="skills devicon-arduino-plain " style="font-size: 40px;" title="Arduino"></i>
+                            <i class="skills devicon-ubuntu-plain " style="font-size: 40px;" title="Ubuntu"></i>
+                            <i class="skills devicon-jupyter-plain " style="font-size: 40px;" title="Jupyter"></i>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--=========================PROJECTS HEADER ONLY=========================-->
+    <div class="header2" id="projects">
+        <div class="projects-header animate__animated animate__fadeIn wow">
+            <h1 class="section-title">Projects</h1>
+        </div>
+    </div>
+<!--=========================PROJECTS ALL 4=========================--> 
+    <div class="container d-flex align-items-center justify-content-center flex-wrap">
+        <div class="box animate__animated animate__slideInLeft wow" data-wow-duration="1.3s">
+            <div class="body">
+                <div class="imgContainer">
+                    <img src="./assets/img/project1.jpg" alt="">
+                </div>
+                <div class="content d-flex flex-column align-items-center justify-content-center">
+                    <div>
+                        <h3 class="text-white typewriter" style="text-align: center;">Music Info and Controller Widget</h3>
+                           <p class="text-white">Have you ever wanted to control or view the information for a song you're
+                                listening to on ANY app with a single glance? This widget makes it possible! It's a desktop
+                                rainmeter skin that works with every player I could think of: AIMP, Foobar2000, iTunes,
+                                Spotify, JRiver Media Center, Windows Media Player, YouTube, SoundCloud, BandCamp, Twitch,
+                                VK, and so on. Have a good time! 
+                            </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!--======================Project 2 in main div==========================-->
+        <div class="box animate__animated animate__slideInRight wow" data-wow-duration="1.3s"
+            style="margin-top: -570px;  margin-left: 620px ;width: 900px;">
+            <div class="body" style="width: 600px;">
+                <div class="imgContainer" style="width: 600px;">
+                    <img src="./assets/img/project2.jpg" alt="">
+                </div>
+                <div class="content d-flex flex-column align-items-center justify-content-center" style="width: 600px;">
+                    <div>
+                        <h3 class="text-white typewriter" style="text-align: center;">Desktop Widgets</h3>
+                            <p class="text-white">Inspired by The Force Awakens, I created a set of Star Wars-themed
+                                widgets with Lua, CSS and GIMP. A lightsaber for volume control, music visualizers on Rey
+                                and Kylo's lightsabers, and various Star Wars ships and robots as file links, including the
+                                TIE Fighter, Gunship, AT-AT Walker, Millennium Falcon, and BB-8. It made my inner Star Wars
+                                fan very happy.
+                            </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!--======================Project 3 in main div==========================-->
+        <div class="box animate__animated animate__slideInLeft wow" data-wow-duration="1.3s">
+            <div class="body">
+                <div class="imgContainer">
+                    <img src="./assets/img/project3.jpg" alt="">
+                </div>
+                <div class="content d-flex flex-column align-items-center justify-content-center">
+                    <div>
+                        <h3 class="text-white typewriter" style="text-align: center;">Customized Desktop</h3>
+                            <p class="text-white">This is my cutomized desktop which I've configured to have access to
+                                everything I need in one click. Includes several magic visualizers that resemble stars and
+                                fireflies!
+                            </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!--======================Project 4 in main div==========================-->
+        <div class="box animate__animated animate__slideInRight wow" data-wow-duration="1.3s"
+            style="margin-top: -570px; margin-left: 620px ;width: 900px;">
+            <div class="body" style="width: 600px;">
+                <div class="imgContainer" style="width: 600px;">
+                    <img src="./assets/img/project4.jpg" alt="">
+                </div>
+                <div class="content d-flex flex-column align-items-center justify-content-center" style="width: 600px;">
+                    <div>
+                        <h3 class="typewriter text-white" style="text-align: center;">Spotify Theme</h3>
+                            <p class="fs-6 text-white">Here is a theme I made using Dribblish, CSS5 and JSON for Spotify
+                                because the default theme was a little too plain and the green didn't go with my purple
+                                desktop setup. I really like this gradient; it gave my Spotify application more of an
+                                artistic appearance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--=========================EDUCATION HEADER ONLY========================-->
+    <div class="header2" id="education">
+        <div class="projects-container">
+            <div class="projects-header animate__animated animate__fadeIn wow">
+                <h1 class="section-title">Education</h1>
+            </div>
+        </div>
+    </div>
+<!--=========================EDUCATION 1========================-->
+    <div class="container d-flex align-items-center justify-content-center flex-wrap">
+        <div class="box animate__animated animate__slideInLeft wow" data-wow-duration="1.3s">
+            <div class="body">
+                <div class="imgContainer">
+                    <img src="./assets/img/bishop-school.jpg" alt="">
+                </div>
+                    <div class="content d-flex flex-column align-items-center justify-content-center">
+                        <div>
+                            <h3 class="text-white typewriter " style="text-align: center;">The Bishop's School, Undri, Pune</h3>
+                            <p class=" text-white">It would be challenging to encapsulate all the fantastic experiences
+                                I had at Bishops in a single sentence, but there isn't a school I could have chosen for
+                                my personal growth that is better. I learned how to persevere at this school, and I made some wonderful friends who I still treasure now. I received a 93.2% in PCM and IT when I
+                                graduated from high school here in 2021. (ISC)
+                            </p>
+                        </div>
+                    </div>
+            </div>
+        </div>
+<!--=========================EDUCATION 2========================-->
+        <div class="box animate__animated animate__slideInRight wow data-wow-duration=1.3s" style="margin-top: -570px;  margin-left: 620px ;width: 900px;">
+            <div class="body" style="width: 600px;">
+                <div class="imgContainer" style="width: 600px;">
+                    <img src="./assets/img/mit-adt.PNG" alt="">
+                </div>
+                <div class="content d-flex flex-column align-items-center justify-content-center" style="width: 600px;">
+                    <div>
+                        <h3 class="text-white typewriter " style="text-align: center;">MIT ADT University, Pune</h3>
+                        <p class="fs-6 text-white">It's been an adventure for me to study here for my B.Tech in Computer Science and Engineering. I'm thankful to have made some incredible friends who have helped me along the way.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--=========================CONTACT=========================-->
+    <div class="header2" id="contact">
+        <div class="projects-container">
+            <div class="projects-header animate__animated animate__fadeIn wow">
+                <h1 class="section-title">Contact</h1>
+            </div>
+            <div class="section-box">
+                <div class="box3 animate__animated animate__slideInRigt wow" data-wow-duration="1.3s">
+                    <p>
+                        <h2 class="typewriter wow"><u> REACH OUT TO ME ON: </u></h2><br><br>
+                        <div class="social">
+                            <a href="https://www.deviantart.com/harkeerat16" target="_blank"><i class="contact fa-brands fa-deviantart fa-3x" style="display: flex;"></i></a>
+                            <a href="https://github.com/eKeiran" target="_blank"><i class="contact fa-brands fa-github fa-3x" style="display: flex;"></i></a>
+                            <a href="https://www.linkedin.com/in/harkeerat-dhunda-796561223" target="_blank"><i class="contact fa-brands fa-linkedin fa-3x" style="display: flex;"></i></a>
+                            <a href="https://www.instagram.com/blackreach.wyvern/?next=%2F" target="_blank"><i class="contact fa-brands fa-instagram fa-3x" style="display: flex;"></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=100017194309168" target="_blank"><i class="contact fa-brands fa-facebook fa-3x" style="display: flex;"></i></a>
+                        </div>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div><br><br><br>
+<!--=========================FOOTER=========================-->
+    <footer>
+        <div class="footer">
+            <b>
+                <h4>🖤 Thanks for visiting 🖤 </h4>
+            </b>
+        </div>
+    </footer>
+    
+</body>
+</html>
