@@ -1,355 +1,552 @@
-<!DOCTYPE html>
-<html lang="en">
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  max-width: 100;
+  max-height: 100;
+  scroll-behavior: fixed;
+  background: image("./img/background.png");
+}
 
-<head>
-    <title> Harkeerat Dhunda | Tech Enthusiast </title>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/x-icon" href="assets/img/favicon.PNG">
+@font-face {
+  font-family: 'storopiaregular';
+  src: url('../fonts/storopia-webfont.woff2') format('woff2'),
+    url('../fonts/storopia-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 
-    <!--Responsive meta tag-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+}
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+/* @font-face kit by Fonts2u (https://fonts2u.com) */
+@font-face {
+  font-family: "Typewriter";
+  src: url("../fonts/typewriterA602_________.eot?") format("eot"), url("../fonts/typewriterA602_________.woff") format("woff"), url("../fonts/typewriterA602_________.ttf") format("truetype"), url("../fonts/typewriterA602_________.svg#Typewriter-a602(deadpostman2004)") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 
-    <!--Bootstrap-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+.nav-spacing {
+  padding-right: 2rem !important;
+  /*root elemnt size*/
+  padding-left: 2rem !important;
+}
 
-    <!-- ANIMATE CSS LINKS (REQUIRED) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="assets/css/main.css">
+.bgnav {
+  background-image: url('../img/header.jpg');
+  height: 100px;
+}
 
-    <!--Icons-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-    <script src="https://kit.fontawesome.com/8d0bf46219.js" crossorigin="anonymous"></script>
+.navbar-nav:not(.bgnav) {
+  align-items: center;
 
-    <!--For Scroll animation-->
+}
 
-    <script>
-        // WOW INIT
-        new WOW().init();
+.navbar-nav li a {
+  color: white;
+}
 
-    </script>
-    <!--For tilt animationa-->
-    <script src="./assets/js/SimpleTilt.js"></script>
-    <!--For Flip-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
-    <!--SCROLL BAR-->
-    <style>
-        /* width */
-        ::-webkit-scrollbar {
-            width: 15px;
-            height: 60px;
-            background-color: black;
-        }
+.nav-item {
+  font-size: 20px;
+  border-radius: 25px 0px;
+  align-items: center;
+  background-color: #000000;
+  border: 2.4px solid rgba(0, 255, 251, 0.916);
+  box-sizing: border-box;
+  margin: 20px;
+  display: flex;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
 
-        /* Track */
-        ::-webkit-scrollbar-track {
-            box-shadow: inset 0 0 5px rgb(0, 0, 0);
-            border-radius: 10px;
-            background-color: black;
-        }
+.nav-item:after {
+  background-color: rgba(255, 255, 255, 0.988);
+  border-radius: 25px 0px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(0px, 0px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
 
-        /* Handle */
-        ::-webkit-scrollbar-thumb {
-            background: linear-gradient(rgb(0, 26, 255), rgb(0, 255, 221));
-            border-radius: 10px;
-            background-clip: content-box;
-            height: 300px;
-        }
+.nav-item:active {
+  background-color: #00bffff4;
+  outline: 0;
+}
 
-        /* Handle on hover */
-        ::-webkit-scrollbar-thumb:hover {
-            background: linear-gradient(rgb(0, 255, 238), rgb(0, 21, 255));
-        }
-    </style>
+.nav-item:hover:after {
+  transform: translate(8px, 8px);
+}
 
-</head>
+.nav-item:hover {
+  transition: 0.3s;
+  outline: 0;
+}
 
-<body style="font-family: storopiaregular;">
-<!--========================= Navigation Bar =========================-->
-    <nav class="navbar navbar-expand bgnav">
-        <img src="assets/img/logo.PNG" class="logo" alt="logo"></img>
-        <a class="navbar-brand col px-md-2"></a>
-            <div class="collapse navbar-collapse">
-                <ul class="navbar-nav me-auto animate__animated animate__rotateIn animate__delay-1s">
-                    <li class="nav-item" style="margin-left: -120px ;">
-                        <a class="nav-link nav-spacing" href="#about-me">About Me</a>
-                    </li>
-                    
-                    <li class="nav-item">
-                        <a class="nav-link nav-spacing" href="#skills">Skills</a>
-                    </li>
-                    
-                    <li class="nav-item">
-                        <a class="nav-link nav-spacing" href="#projects">Projects</a>
-                    </li>
-                    
-                    <li class="nav-item">
-                        <a class="nav-link nav-spacing" href="#education">Education</a>
-                    </li>
-                    
-                    <li class="nav-item">
-                        <a class="nav-link nav-spacing" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-    </nav>
-<!--=====================================Front====================================-->
-    <div class="landing" id="section1">
-        <div class="image animate__animated animate__slideInDown wow myphoto" data-wow-duration="1.5s"
-            data-wow-delay="0.23s">
-            <img src="assets/img/me.jpg" alt="name photo">
-        </div>
-        <div class="me animate__animated animate__slideInUp wow" data-wow-duration="1.5s">
-            <h1 class="typewriter wow">Hello, World!</h1>
-            <h1 style="text-decoration: wavy;">
-                <u>I'm <b>Harkeerat Dhunda</b></u>
-            </h1>
-        </div>
-    </div>
+.typewriter {
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid rgb(0, 255, 217);
+  /* The typwriter cursor */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em;
+  /* Adjust as needed */
+  animation:
+    typing 4.5s steps(40, end),
+    blink-caret .85s step-end infinite;
+  font-family: Typewriter;
+  font-size: 45px;
+}
 
-    <script>
-        tilter(".landing", {
-            perspective: 300, // Default 400
-            maxTilt: 1.6, // Default 4
-            mantain: true, // Default false
-            fx3d: false, // Default false
-            fxDistance: 70, // Default 40
-        });
-    </script>
+.typewriter {
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid rgb(0, 255, 217);
+  /* The typwriter cursor */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em;
+  /* Adjust as needed */
+  animation:
+    typing 4.5s steps(40, end),
+    blink-caret .85s step-end infinite;
+  font-family: Typewriter;
+  font-size: 45px;
+}
 
-<!--========================= About ME=========================-->
-    <div class="header2" id="about-me">
-        <div class="projects-container">
-            <div class="projects-header animate__animated animate__fadeIn wow">
-                <h1 class="section-title">About Me</h1>
-            </div>
-            <div class="section-box">
-                <div class="box animate__animated animate__slideInLeft wow" data-wow-duration="1.3s"><br>
-                    <img class="me2" src="assets/img/me2.jpg">
-                        <p>
-                            <h4>Hi! I'm Harkeerat Dhunda from Pune, India.<br>I'm currently working on my B.Tech. in
-                                Computer Science. From an early age, I have always loved coding and have created websites
-                                for fun and games. I prefer to learn things by myself, and I have a great deal of passion and
-                                enthusiasm for anything I set my mind to.<br>I enjoy <b style="color: #00ffdd;">automation,
-                                customization, UI/UX, neural networks, machine learning, back-end development, game
-                                development and experimenting with my Arch Linux.<br></b>
-                                I'm also fascinated by astrophysics so I like to study that in my spare time. I also like
-                                writing stories on occasion.<br>
-                                Most of the time, I'm reading one of my favourite novels or gazing into the mysteries of space with a telescope.
-                            </h4>
-                        </p>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <script>
-        tilter(".box", {
-            perspective: 400, // Default 400
-            maxTilt: 2, // Default 4
-            mantain: false, // Default false
-            fx3d: false, // Default false
-            fxDistance: 70, // Default 40
-        });
-    </script>
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0
+  }
 
-<!--=========================SKILLS=========================-->
-    <div class="header2" id="skills">
-        <div class="projects-container">
-            <div class="projects-header animate__animated animate__fadeIn wow">
-                <h1 class="section-title">Skills</h1>
-            </div>
-            <div class="section-box">
-                <div class="box3 animate__animated animate__slideInLeft wow" data-wow-duration="1.3s">
-                    <h6 class="typewriter wow" style="text-decoration:underline ; font-size: 42;">Programming</h6>
-                    <div class="skill">
-                        <i class="skills devicon-cplusplus-plain-wordmark" style="font-size: 40px;" title="C++"></i></a>
-                        <i class="skills devicon-html5-plain" style="font-size: 40px;" title="HTML5"></i>
-                        <i class="skills devicon-css3-plain" style="font-size: 40px;" title="CSS3"></i>
-                        <i class="skills devicon-javascript-plain" style="font-size: 40px;" title="JAVASCRIPT"></i><br>
-                        <i class="skills fa-brands fa-python fa-2x" title="PYTHON"></i>
-                        <i class="skills devicon-mysql-plain" style="font-size: 40px;" title="MySQL"></i>
-                        <i class="skills fa-brands fa-java fa-2x" title="JAVA"></i>
-                        <i class="skills devicon-linux-plain" style="font-size: 40px;" title="LINUX"></i>
-                        <i class="skills devicon-react-original" style="font-size: 40px;" title="React.js"></i>
-                        <i class="skills devicon-nodejs-plain" style="font-size: 40px;" title="Node.js"></i>
-                    </div><br>
-                        <div class="sec">
-                            <h6 class="typewriter wow" style="text-decoration:underline ;">Tools & Tech</h6>
-                        </div>
-                        <div class="skill">
-                            <i class="skills devicon-visualstudio-plain" style="font-size: 40px;"
-                            title="Visual Studio"></i></a>
-                            <i class="skills devicon-bash-plain" style="font-size: 40px;" title="Bash"></i>
-                            <i class="skills devicon-gimp-plain" style="font-size: 40px;" title="GIMP"></i>
-                            <i class="skills devicon-git-plain" style="font-size: 40px;" title="GIT"></i><br>
-                            <i class="skills devicon-arduino-plain " style="font-size: 40px;" title="Arduino"></i>
-                            <i class="skills devicon-ubuntu-plain " style="font-size: 40px;" title="Ubuntu"></i>
-                            <i class="skills devicon-jupyter-plain " style="font-size: 40px;" title="Jupyter"></i>
-                        </div>
-                </div>
-            </div>
-        </div>
-    </div>
-<!--=========================PROJECTS HEADER ONLY=========================-->
-    <div class="header2" id="projects">
-        <div class="projects-header animate__animated animate__fadeIn wow">
-            <h1 class="section-title">Projects</h1>
-        </div>
-    </div>
-<!--=========================PROJECTS ALL 4=========================--> 
-    <div class="container d-flex align-items-center justify-content-center flex-wrap">
-        <div class="box animate__animated animate__slideInLeft wow" data-wow-duration="1.3s">
-            <div class="body">
-                <div class="imgContainer">
-                    <img src="./assets/img/project1.jpg" alt="">
-                </div>
-                <div class="content d-flex flex-column align-items-center justify-content-center">
-                    <div>
-                        <h3 class="text-white typewriter" style="text-align: center;">Music Info and Controller Widget</h3>
-                           <p class="text-white">Have you ever wanted to control or view the information for a song you're
-                                listening to on ANY app with a single glance? This widget makes it possible! It's a desktop
-                                rainmeter skin that works with every player I could think of: AIMP, Foobar2000, iTunes,
-                                Spotify, JRiver Media Center, Windows Media Player, YouTube, SoundCloud, BandCamp, Twitch,
-                                VK, and so on. Have a good time! 
-                            </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-<!--======================Project 2 in main div==========================-->
-        <div class="box animate__animated animate__slideInRight wow" data-wow-duration="1.3s"
-            style="margin-top: -570px;  margin-left: 620px ;width: 900px;">
-            <div class="body" style="width: 600px;">
-                <div class="imgContainer" style="width: 600px;">
-                    <img src="./assets/img/project2.jpg" alt="">
-                </div>
-                <div class="content d-flex flex-column align-items-center justify-content-center" style="width: 600px;">
-                    <div>
-                        <h3 class="text-white typewriter" style="text-align: center;">Desktop Widgets</h3>
-                            <p class="text-white">Inspired by The Force Awakens, I created a set of Star Wars-themed
-                                widgets with Lua, CSS and GIMP. A lightsaber for volume control, music visualizers on Rey
-                                and Kylo's lightsabers, and various Star Wars ships and robots as file links, including the
-                                TIE Fighter, Gunship, AT-AT Walker, Millennium Falcon, and BB-8. It made my inner Star Wars
-                                fan very happy.
-                            </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-<!--======================Project 3 in main div==========================-->
-        <div class="box animate__animated animate__slideInLeft wow" data-wow-duration="1.3s">
-            <div class="body">
-                <div class="imgContainer">
-                    <img src="./assets/img/project3.jpg" alt="">
-                </div>
-                <div class="content d-flex flex-column align-items-center justify-content-center">
-                    <div>
-                        <h3 class="text-white typewriter" style="text-align: center;">Customized Desktop</h3>
-                            <p class="text-white">This is my cutomized desktop which I've configured to have access to
-                                everything I need in one click. Includes several magic visualizers that resemble stars and
-                                fireflies!
-                            </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-<!--======================Project 4 in main div==========================-->
-        <div class="box animate__animated animate__slideInRight wow" data-wow-duration="1.3s"
-            style="margin-top: -570px; margin-left: 620px ;width: 900px;">
-            <div class="body" style="width: 600px;">
-                <div class="imgContainer" style="width: 600px;">
-                    <img src="./assets/img/project4.jpg" alt="">
-                </div>
-                <div class="content d-flex flex-column align-items-center justify-content-center" style="width: 600px;">
-                    <div>
-                        <h3 class="typewriter text-white" style="text-align: center;">Spotify Theme</h3>
-                            <p class="fs-6 text-white">Here is a theme I made using Dribblish, CSS5 and JSON for Spotify
-                                because the default theme was a little too plain and the green didn't go with my purple
-                                desktop setup. I really like this gradient; it gave my Spotify application more of an
-                                artistic appearance.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-<!--=========================EDUCATION HEADER ONLY========================-->
-    <div class="header2" id="education">
-        <div class="projects-container">
-            <div class="projects-header animate__animated animate__fadeIn wow">
-                <h1 class="section-title">Education</h1>
-            </div>
-        </div>
-    </div>
-<!--=========================EDUCATION 1========================-->
-    <div class="container d-flex align-items-center justify-content-center flex-wrap">
-        <div class="box animate__animated animate__slideInLeft wow" data-wow-duration="1.3s">
-            <div class="body">
-                <div class="imgContainer">
-                    <img src="./assets/img/bishop-school.jpg" alt="">
-                </div>
-                    <div class="content d-flex flex-column align-items-center justify-content-center">
-                        <div>
-                            <h3 class="text-white typewriter " style="text-align: center;">The Bishop's School, Undri, Pune</h3>
-                            <p class=" text-white">It would be challenging to encapsulate all the fantastic experiences
-                                I had at Bishops in a single sentence, but there isn't a school I could have chosen for
-                                my personal growth that is better. I learned how to persevere at this school, and I made some wonderful friends who I still treasure now. I received a 93.2% in PCM and IT when I
-                                graduated from high school here in 2021. (ISC)
-                            </p>
-                        </div>
-                    </div>
-            </div>
-        </div>
-<!--=========================EDUCATION 2========================-->
-        <div class="box animate__animated animate__slideInRight wow data-wow-duration=1.3s" style="margin-top: -570px;  margin-left: 620px ;width: 900px;">
-            <div class="body" style="width: 600px;">
-                <div class="imgContainer" style="width: 600px;">
-                    <img src="./assets/img/mit-adt.PNG" alt="">
-                </div>
-                <div class="content d-flex flex-column align-items-center justify-content-center" style="width: 600px;">
-                    <div>
-                        <h3 class="text-white typewriter " style="text-align: center;">MIT ADT University, Pune</h3>
-                        <p class="fs-6 text-white">It's been an adventure for me to study here for my B.Tech in Computer Science and Engineering. I'm thankful to have made some incredible friends who have helped me along the way.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-<!--=========================CONTACT=========================-->
-    <div class="header2" id="contact">
-        <div class="projects-container">
-            <div class="projects-header animate__animated animate__fadeIn wow">
-                <h1 class="section-title">Contact</h1>
-            </div>
-            <div class="section-box">
-                <div class="box3 animate__animated animate__slideInRigt wow" data-wow-duration="1.3s">
-                    <p>
-                        <h2 class="typewriter wow"><u> REACH OUT TO ME ON: </u></h2><br><br>
-                        <div class="social">
-                            <a href="https://www.deviantart.com/harkeerat16" target="_blank"><i class="contact fa-brands fa-deviantart fa-3x" style="display: flex;"></i></a>
-                            <a href="https://github.com/eKeiran" target="_blank"><i class="contact fa-brands fa-github fa-3x" style="display: flex;"></i></a>
-                            <a href="https://www.linkedin.com/in/harkeerat-dhunda-796561223" target="_blank"><i class="contact fa-brands fa-linkedin fa-3x" style="display: flex;"></i></a>
-                            <a href="https://www.instagram.com/blackreach.wyvern/?next=%2F" target="_blank"><i class="contact fa-brands fa-instagram fa-3x" style="display: flex;"></i></a>
-                            <a href="https://www.facebook.com/profile.php?id=100017194309168" target="_blank"><i class="contact fa-brands fa-facebook fa-3x" style="display: flex;"></i></a>
-                        </div>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div><br><br><br>
-<!--=========================FOOTER=========================-->
-    <footer>
-        <div class="footer">
-            <b>
-                <h4>🖤 Thanks for visiting 🖤 </h4>
-            </b>
-        </div>
-    </footer>
-    
-</body>
-</html>
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  30% {
+    border-color: rgb(51, 0, 255);
+  }
+}
+
+.projects-header .section-title {
+  color: rgb(255, 255, 255);
+  padding: 20px;
+  width: 1500px;
+  font-weight: bolder;
+  filter: blur(0.5px);
+  border-radius: 5px 50px 5px;
+  background-image: url("../img/section.jpg");
+}
+
+.section-title:hover {
+  filter: brightness(120%);
+  transform: scale(1.03);
+  transition: 0.9s;
+}
+
+body {
+  background-image: url('../img/background.png');
+  background-attachment: fixed;
+  width: 100vw;
+  color: white;
+  max-width: 100% !important;
+  cursor: url("https://www.shareicon.net/data/64x64/2015/03/25/12580_light-saber_128x128.png"
+    ),
+    auto;
+  overflow-x: hidden;
+}
+
+.logo {
+  width: 70px;
+  height: 70px;
+  filter: contrast(180%);
+}
+
+.logo:hover {
+  transform: scale(1.2);
+  transition: 0.5s;
+}
+
+.landing {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  /* height: 100vh; */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 15px;
+  text-align: center;
+}
+
+.landing .image {
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin-top: 5.2%;
+  margin-bottom: 4%;
+}
+
+.landing .image img {
+  width: 42vh;
+  height: 42vh;
+  padding: 2.8vh;
+  background-color: #000000;
+  transition: 0.4s;
+  animation: outglow 4s ease forwards;
+  animation-delay: 0.9s;
+  border-radius: 15%;
+}
+
+@keyframes outglow {
+  0% {
+    border-radius: 20%;
+    box-shadow: -10px -10px 45px #00ff9d, inset 10px 10px 4px #00000010;
+  }
+
+  50% {
+    border-radius: 40%;
+    box-shadow: 10px 10px 25px #00d9ff, inset -10px -10px 4px #00000010;
+  }
+
+  80% {
+    border-radius: 30%;
+  }
+
+  100% {
+    border-radius: 100%;
+    box-shadow: 10px 10px 30px #000000, inset -10px -10px 4px #00000010;
+  }
+}
+
+.myphoto {
+  filter: contrast(111%);
+}
+
+.myphoto:hover {
+
+  filter: brightness(110%);
+  transition: 2s;
+}
+
+.landing .me {
+  min-width: 50vh;
+  min-height: 20vh;
+  background: linear-gradient(rgba(255, 255, 255, 0.514), rgba(0, 0, 0, .8)), url("../img/gifname.gif");
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  padding: 3vh 2vh 3vh 2vh;
+  box-shadow: 5px 5px 40px #000000, inset -5px -5px 10px #0000000c,
+    -5px -5px 30px #000000bb, inset -5px -5px 10px #0000000c;
+  border-style: ridge;
+  border-width: 8.5px;
+  border-color: #a4e3f8;
+  transition: 0.2s;
+}
+
+.landing .me:hover {
+  filter: brightness(130%);
+}
+
+.me2 {
+  filter: drop-shadow(100%);
+}
+
+
+.me2:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+.header2 {
+  margin-top: 5%;
+  position: relative;
+  max-width: 100%;
+  height: max-content;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+
+.header2 .section-box {
+  width: 100%;
+  margin-top: -2%;
+  max-width: 80vh;
+  margin-left: 200px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.header2 .section-box .box {
+  width: 690px !important;
+  max-width: 95vw;
+  height: 720px;
+  margin: 12em;
+  margin-bottom: 3em;
+  margin-top: -2em;
+  max-height: fit-content;
+  border-radius: 30px;
+  box-shadow: 5px 5px 30px #000000, inset -5px -5px 10px #0000000c;
+  text-align: center;
+  padding: 15px;
+  display: block;
+  justify-content: space-between;
+  line-height: 1.6;
+  padding-bottom: 20px;
+}
+
+
+.header2 .section-box .box img {
+  width: 24vh;
+  height: 25vh;
+  margin: 0 auto;
+  border-radius: 30%;
+  box-shadow: -10px -10px 20px #00000083, 10px 10px 20px #0000004b;
+  padding: 0.20em;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 8rem;
+  box-shadow: 5px 5px 30px #000000, inset -5px -5px 10px #0000000c;
+  padding: 3.5rem;
+}
+
+
+.container {
+  transform-style: preserve-3d;
+}
+
+.container .box {
+  position: relative;
+  width: 600px;
+  height: 500px;
+  margin: 30px;
+  margin-top: -20px;
+  margin: 0 auto;
+  margin-left: -100px;
+
+  margin-bottom: 75px;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.container .box .body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: 0.9s ease;
+}
+
+.container .box .body .imgContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+.container .box .body .imgContainer img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  object-fit: cover;
+}
+
+.container .box .body .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 0, 0);
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transform: rotateY(180deg);
+  border-radius: 30px;
+}
+
+.container .box:hover .body {
+  transform: rotateY(180deg);
+  width: 100%;
+  height: 100%;
+}
+
+.container .box .body .content div {
+  transform-style: preserve-3d;
+  padding: 20px;
+  height: 300px;
+  margin-top: 0px;
+  background: linear-gradient(45deg, #3300ff, #00ffe1);
+  transform: translateZ(100px);
+
+}
+
+.container .box .body .content div h3 {
+  letter-spacing: 1px;
+  font-size: 35px;
+  font-weight: lighter;
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: rgb(255, 255, 255);
+}
+
+
+.container .box .body .content div p {
+  letter-spacing: 0.4px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.box3 {
+  width: 1050px !important;
+  height: 350px;
+  margin: 0 auto;
+  margin-left: 30px;
+  border-radius: 30px;
+  box-shadow: 5px 5px 30px #000000, inset -5px -5px 10px #0000000c;
+  text-align: center;
+  padding: 15px;
+  display: block;
+  justify-content: space-between;
+  line-height: 1.6;
+  padding-bottom: 20px;
+}
+
+.contact {
+  width: 110px;
+  height: 110px;
+  background-color: #000000;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000000;
+  margin: 0 25px;
+  border-radius: 50px;
+  background: linear-gradient(145deg, #2600ffb7, #00ffe5);
+  box-shadow: 0px 0px 22px #000000, -10px -10px 22px #0d00ff35;
+  transition: transform 0.9s;
+}
+
+.contact:hover {
+  color: #3300ff;
+  background-color: transparent;
+  border: 2px solid #000000;
+  transform: rotate(360deg) scale(1.1);
+  border-radius: 50px;
+  transition: 1.3s;
+  background: linear-gradient(145deg, #2600ffb7, #00ffe5);
+}
+
+.skill {
+  margin: 0 auto;
+  margin-top: 15px;
+  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sec {
+  margin: 0 auto;
+  margin-top: 15px;
+  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills {
+  width: 60px;
+  height: 60px;
+  background-color: #000000;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000000;
+  margin: 0 20px;
+  border-radius: 50px;
+  background: linear-gradient(145deg, #2600ffb7, #00ffe5);
+  box-shadow: 0px 0px 22px #000000, -10px -10px 22px #0d00ff35;
+  transition: transform 0.9s;
+}
+
+.skills:hover {
+  color: #3300ff;
+  background-color: transparent;
+  border: 2px solid #000000;
+  transform: rotate(360deg) scale(1.2);
+  border-radius: 50px;
+  transition: 1.3s;
+  background: linear-gradient(145deg, #2600ffb7, #00ffe5);
+}
+
+.social {
+  margin: 0 auto;
+  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social a {
+  text-decoration: none;
+}
+
+footer {
+  background-color: #0000009f;
+  width: 100%;
+  height: 100%;
+  margin: 20px 0 auto;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer {
+  margin-top: 15px;
+  max-width: 100%;
+  text-align: center;
+  font-size: large;
+  margin-bottom: 1.2rem;
+}
